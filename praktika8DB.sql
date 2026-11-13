@@ -162,7 +162,6 @@ CROSS JOIN (SELECT DISTINCT Products.category FROM Products) AS Unique_Categorie
 
 
 -- Задание 12
-SELECT New_Customer.full_name AS new_customer, 
-       Recommender.full_name AS recommended_by
+SELECT New_Customer.full_name AS new_customer, Recommender.full_name AS recommended_by
 FROM Customers AS New_Customer
 JOIN Customers AS Recommender ON New_Customer.recommended_by = Recommender.customer_id;
