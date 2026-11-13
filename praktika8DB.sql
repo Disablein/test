@@ -92,7 +92,7 @@ WHERE EXISTS (
 
 
 -- Задание 7
--- Способ 1: LEFT JOIN
+--LEFT JOIN
 SELECT Customers.full_name
 FROM Customers
 LEFT JOIN Orders ON Customers.customer_id = Orders.customer_id
@@ -101,7 +101,7 @@ LEFT JOIN Products ON Order_Items.product_id = Products.product_id
                   AND Products.product_name = 'Ноутбук'
 WHERE Products.product_id IS NULL;
 
--- Способ 2: NOT IN
+--NOT IN
 SELECT Customers.full_name
 FROM Customers
 WHERE Customers.customer_id NOT IN (
